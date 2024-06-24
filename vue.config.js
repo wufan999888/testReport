@@ -1,6 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
+
   devServer: {
     //反向代理配置，注意rewrite写法，开始没看文档在这里踩了坑
     proxy: {// 本地开发环境通过代理实现跨域，生产环境使用 nginx 转发
@@ -12,5 +13,7 @@ module.exports = defineConfig({
         }
       }
     }
-  }
+  },
+
+  publicPath: './'
 })
