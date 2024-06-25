@@ -14,7 +14,7 @@ const service = axios.create({
   // withCredentials: true, // 跨域请求时是否发送cookies
   timeout: 50000, // 请求超时设置
   headers: {
-    Accept: 'application/json',
+    Accept: 'application/json'
     // body传参不要加这个
     // "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
   }

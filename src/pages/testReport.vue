@@ -65,7 +65,7 @@
 </template>
 
 <script setup>
-import { test } from "@/service"
+import { getData } from "@/service"
 import { onMounted, reactive } from "vue";
 let dataItem = reactive({
   testReportNum: '（2024）0312-1-0546',
@@ -73,8 +73,8 @@ let dataItem = reactive({
   entrustmentDate: '2024-04-15'
 })
 
-async function loginTest() {
-  const res = await test()
+async function getDataHandle() {
+  const res = await getData()
   if (res.ret === 200) {
     dataItem.testReportNum = res.data.item.testReportNum
     dataItem.reportDate = res.data.item.reportDate
@@ -82,7 +82,7 @@ async function loginTest() {
   }
 }
 onMounted(()=>{
-  loginTest()
+  getDataHandle()
 })
 </script>
 
