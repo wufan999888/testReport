@@ -99,7 +99,7 @@ onMounted(()=>{
 }
 .testReport-title {
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 600;
   background: #f7f7f8;
   padding: 10px 0;
   text-align: center;
@@ -113,6 +113,7 @@ onMounted(()=>{
 }
 .testReport-content-box {
   padding-top: 4px;
+  padding-right: 15px;
   border-bottom: .5px solid #C4C4C4;
 }
 .testReport-content-box-title {
